@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #05070b;
+  color: #f2f2f2;
+  font-family: "Fira Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 2fr) minmax(260px, 1fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+.screen {
+  background: #000;
+  border: 1px solid #1f2a3a;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 70vh;
+}
+
+#ascii-screen {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  line-height: 1.15;
+  white-space: pre;
+  overflow: auto;
+}
+
+.panel {
+  background: #111827;
+  border: 1px solid #283548;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stats {
+  display: grid;
+  gap: 8px;
+}
+
+.controls {
+  display: grid;
+  gap: 8px;
+}
+
+button {
+  background: #1f2937;
+  border: 1px solid #2f3b4a;
+  border-radius: 8px;
+  color: #e6edf3;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #273445;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#log {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+  max-height: 240px;
+  overflow: auto;
+  padding-right: 8px;
+}
+
+#log li {
+  background: #0f1722;
+  border: 1px solid #1f2a3a;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
