@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII Town Survival</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="screen">
+        <pre id="ascii-screen" aria-live="polite"></pre>
+      </section>
+      <aside class="panel">
+        <h1>ASCII Town Survival</h1>
+        <div class="stats" id="stats"></div>
+        <div class="controls">
+          <button id="toggle-sim">Pozastaviť</button>
+          <button id="step-sim">Krok</button>
+          <button id="toggle-plan">Plánovanie mesta</button>
+          <button id="build-house">Postaviť dom (-10 drevo)</button>
+          <button id="build-farm">Postaviť farmu (-12 drevo)</button>
+          <button id="build-watchtower">Postaviť strážnu vežu (-20 drevo)</button>
+        </div>
+        <h2>Správy</h2>
+        <ul id="log"></ul>
+      </aside>
+    </main>
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>
